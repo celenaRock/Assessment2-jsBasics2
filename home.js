@@ -53,26 +53,14 @@ const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
 
 //CODE HERE
 const canWeDeliver = (zipCode) => {
-    // if (zipCode === ((i = 0, i < deliveryAreaZipCodes.length), i++) && deliveryAreaZipCodes.includes(zipCode)) {
+     if (deliveryAreaZipCodes.includes(zipCode)) {
         return "You're in our delivey zone!" 
     }
     return "Sorry, you're not in our delivery zone!"
 
+};
 
-// const array1 = [1, 2, 3];
-
-// console.log(array1.includes(2));
-// // expected output: true
-
-// const pets = ['cat', 'dog', 'bat'];
-
-// console.log(pets.includes('cat'));
-// // expected output: true
-
-// console.log(pets.includes('at'));
-// // expected output: false
-
-console.log(canWeDeliver(85205))
+console.log(canWeDeliver(85005));
 /* 
     Problem 2 Continued
 
@@ -91,7 +79,20 @@ console.log(canWeDeliver(85205))
 */
 
 // CODE HERE
+canWeDeliverTwo = (zipCode) => {
+    for(i = 0; i<deliveryAreaZipCodes.length; i++) {
+        if(zipCode === deliveryAreaZipCodes[i]) {
+            return "You're in our delivery zone!"
+        }
+    };
+    for(i = 0; i<deliveryAreaZipCodes.length; i++) {
+        if(zipCode !== deliveryAreaZipCodes[i]) {
+            return "Sorry, we don't deliver to that address."
+        }
+    }
+};
 
+console.log(canWeDeliverTwo(70506));
 
 //////////////////PROBLEM 3////////////////////
 /* 
