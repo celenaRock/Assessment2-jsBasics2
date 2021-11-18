@@ -24,21 +24,23 @@
 //CODE HERE
 
 
+const greetUser = (USERNAME) => {
 
-
+return "Welcome back, " + USERNAME
+}
+console.log(greetUser("Celena"))
 
 //////////////////PROBLEM 2////////////////////
 /* 
     Below is an array of zip codes that are in
     the restaurant's delivery zone. 
 
-    Write a function called `canWeDeliver` that
-    takes in one argument, `zipCode`.
-
-    If the zip code passed in is in the array,
-    return a string letting the user know they
-    are eligible for delivery. If they are not, 
-    return a string letting them know that. 
+  1.  Write a function called `canWeDeliver` 
+  2. that takes in one argument, `zipCode`.
+  3. If the zip code passed in is in the array,
+  4. return a string letting the user know they
+    are eligible for delivery. 
+  5. If they are not, return a string letting them know that. 
 
     For example:
     canWeDeliver(84606) 
@@ -50,9 +52,27 @@
 const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
 
 //CODE HERE
+const canWeDeliver = (zipCode) => {
+    // if (zipCode === ((i = 0, i < deliveryAreaZipCodes.length), i++) && deliveryAreaZipCodes.includes(zipCode)) {
+        return "You're in our delivey zone!" 
+    }
+    return "Sorry, you're not in our delivery zone!"
 
 
+// const array1 = [1, 2, 3];
 
+// console.log(array1.includes(2));
+// // expected output: true
+
+// const pets = ['cat', 'dog', 'bat'];
+
+// console.log(pets.includes('cat'));
+// // expected output: true
+
+// console.log(pets.includes('at'));
+// // expected output: false
+
+console.log(canWeDeliver(85205))
 /* 
     Problem 2 Continued
 
@@ -105,9 +125,14 @@ const deals = [
     to be itself, but use the `replace` method
     to replace the 15 with a 10.
 */
+const {dealsTitle} = deals
+console.log(Object.values(deals));
 
 //CODE HERE
-
+for (const value of deals){
+    console.log(value)
+}
+// console.log(value.replace(/\d+/, "10"))
 
 
 /*
