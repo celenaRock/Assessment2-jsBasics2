@@ -88,3 +88,13 @@ const cart = [
 */
 
 //CODE HERE
+const customer = {
+    name: "JG WENTWORTH",
+    address: "0 Wouldntya wannaknow rd",
+    phone: "877-CASH-NOW",
+    orderType: ["phone", "in-store", "online"],
+    payment: ["structured settlement", "cash now"],
+    order:["the usual"]
+
+}
+console.log(customer)

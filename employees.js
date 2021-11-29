@@ -21,7 +21,17 @@
 
 //CODE HERE
 
-
+class Employee{
+    constructor(name, shifts){
+        this.name=name;
+        this.shifts=shifts
+    }
+    getSchedule(){
+        return `${this.name} works on ${this.shifts}`
+    }
+}
+// const employee = new Employee('Wendy', 'till midnight')
+// console.log(employee)
 
 /*
     Create a new instance of your class.
@@ -34,14 +44,15 @@
 */
 
 //CODE HERE
-
+const empOne = new Employee('Jess', 'weekday mornings, weekday afternoons')
+// console.log(empOne)
 /*
     Call the `getSchedule` method on the
     `empOne` object.
 */
 
 //CODE HERE
-
+// console.log(empOne.getSchedule())
 
 /*
     Make a copy of the empOne object
@@ -56,6 +67,8 @@
 */
 
 //CODE HERE
+const empTwo = {empOne}
+console.log(empTwo)
 
 
 
@@ -83,7 +96,21 @@
 */
 
 //CODE HERE
+class Manager extends Employee {
+    constructor(name, shifts, employees) {
+        super(name, shifts);
+        this.employees = employees;
+    }
 
+    getEmployees = () => {
+        return `${this.name} manages ${this.employees}`
+    }
+
+    addEmployee = emp => {
+        return this.employees.push(emp);
+        
+    }
+}
 
 
 /*
@@ -98,6 +125,7 @@
 */
 
 //CODE HERE
+let manager = new Manager("Winston", ["weekday mornings", "weekday afternoons"], ["Cece", "Schmidt"])
 
 
 /*
@@ -106,7 +134,7 @@
 */
 
 //CODE HERE
-
+manager.getEmployees();
 /*
     Call the `addEmployee` method on the 
     `manager` object passing in the string 
@@ -114,7 +142,7 @@
 */
 
 //CODE HERE 
-
+manager.addEmployee("Coach");
 /*
     Call the `getEmployees` method on the
     `manager` object again to confirm 
@@ -122,3 +150,5 @@
 */
 
 //CODE HERE
+manager.getEmployees();
+console.log(manager)

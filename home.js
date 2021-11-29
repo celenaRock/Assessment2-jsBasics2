@@ -150,3 +150,4 @@ for (const value of deals){
 */
 
 //CODE HERE
+deals[1].disc = deals[1].desc.trim().replace('March', 'April');

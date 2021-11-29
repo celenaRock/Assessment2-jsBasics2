@@ -97,9 +97,48 @@ console.log(pizzaCat)
 */
 
 //CODE HERE
-let foodArr = [{
-    
-}]
+foodArr = [
+    {
+    name: "nasty eggs",
+    price: 30,
+    category: "entree",
+    popularity: 10,
+    rating: 3,
+    tags: ["eggs", "unseasoned"]
+},
+{
+    name: "cranky crab burger",
+    price: 25,
+    category: "seafood",
+    popularity: 7,
+    rating: 2,
+    tags: ["pinches","shells", "fried"]
+},
+{
+    name: "dirty hotdog",
+    price: 20,
+    category: "insufferable children's menu",
+    popularity: 7,
+    rating: 1,
+    tags: ["bland", "bun", "mystery slime", "meat"]
+},
+{
+    name: "terrible tacos",
+    price: 15,
+    category: "appetizer",
+    popularity: 5,
+    rating: 4,
+    tags: ["tortilla", "lettuce", "meat?"]
+},
+{
+    name: "inedible ice cream",
+    price: 10,
+    category: "dessert",
+    popularity: 9,
+    rating: 5,
+    tags: ["chemicals mostly"]
+},
+]
 
 
 //////////////////PROBLEM 4////////////////////
@@ -116,7 +155,8 @@ let foodArr = [{
 
 //CODE HERE
 
-// const filteredFood = foodArr.filter(/* CALLBACK HERE */)
+const filteredFood = foodArr.filter(food => food.tags.includes("meat"))
+
 
 
 
@@ -161,6 +201,16 @@ let foodArr = [{
 
 //CODE HERE
 
+const filterByProperty = (property, number, type) => {
+    let result = foodArr.filter(food => {
+        if (type === 'above') {
+            return food[property] > number
+        } else {
+            return food[property] < number
+        }
+    })
+    return result
+}
 
 /*
     Invoke the `filterByProperty` function passing
@@ -170,3 +220,4 @@ let foodArr = [{
 */
 
 //CODE HERE
+console.log(filterByProperty('price', 15, 'above'))
