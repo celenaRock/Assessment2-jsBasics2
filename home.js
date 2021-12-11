@@ -130,10 +130,9 @@ const {dealsTitle} = deals
 console.log(Object.values(deals));
 
 //CODE HERE
-for (const value of deals){
-    console.log(value)
-}
-console.log(value.replace(/\d+/, "10"))
+let deals1 = deals[0].title.replace("15%", "10%")
+console.log(deals1)
+
 
 
 /*
@@ -150,4 +149,6 @@ console.log(value.replace(/\d+/, "10"))
 */
 
 //CODE HERE
-deals[1].disc = deals[1].desc.trim().replace('March', 'April');
+let until = deals[1].desc.replace("March", "April")
+
+console.log(until)
