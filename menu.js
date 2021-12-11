@@ -39,7 +39,7 @@ const pizza = {
      rating: 1,
      tags: ["nasty", "cockroach", "terrible", "ham"]
 }
-
+console.log(pizza)
 
 //////////////////PROBLEM 2////////////////////
 /* 
