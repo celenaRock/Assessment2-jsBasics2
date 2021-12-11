@@ -133,7 +133,7 @@ console.log(Object.values(deals));
 for (const value of deals){
     console.log(value)
 }
-// console.log(value.replace(/\d+/, "10"))
+console.log(value.replace(/\d+/, "10"))
 
 
 /*

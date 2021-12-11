@@ -52,7 +52,7 @@ const empOne = new Employee('Jess', 'weekday mornings, weekday afternoons')
 */
 
 //CODE HERE
-// console.log(empOne.getSchedule())
+console.log(empOne.getSchedule())
 
 /*
     Make a copy of the empOne object

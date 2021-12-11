@@ -35,8 +35,8 @@ const cart = [
 
 //CODE HERE
 
-// const summedPrice = cart.reduce(/* CALLBACK HERE */)
-
+const summedPrice = cart.reduce((sum, f) => sum + f.price, 4)
+console.log(summedPrice)
 
 //////////////////PROBLEM 2////////////////////
 /*  
@@ -54,8 +54,11 @@ const cart = [
 */
 
 //CODE HERE
-
-
+function calcFinalPrice(cartTotal, couponValue, tax) {
+    finalNumber=(cartTotal-couponValue)+(cartTotal*(tax* .100))
+    return finalNumber
+}
+console.log(calcFinalPrice(10000,35, .2))
 
 //////////////////PROBLEM 3////////////////////
 /*  
@@ -77,8 +80,7 @@ const cart = [
     Your object should have at least 4 properties. 
 */
 
-/*
-    TEXT ANSWER HERE
+/* Below I have the customer information the would typically be seen at checkout. I made everything a string to give option for letter-dialing on the phone.
 
 */
 
